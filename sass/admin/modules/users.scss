@@ -1,0 +1,42 @@
+
+table {
+    .actions {
+        width: 46px !important;
+
+        * {
+            display: inline-block;
+        }
+    }
+}
+
+a.add-user-button {
+    span {
+        margin-right: 8px;
+    }
+}
+
+@media #{$mobile} {
+    a.add-user-button {
+        width: 90%;
+        margin: 5%;
+    }
+}
+
+.widget {
+    // width: 100%;
+    width: 500px;
+    background-color: $light-grey;
+    padding: 20px;
+    border: 1px $grey solid;
+    @include border-radius(10px);
+    @include box-shadow(5px 5px 10px $medium-grey);
+    margin-bottom: 2%;
+    margin-right: 2%;
+    float: left;
+}
+
+.view-only {
+    input[disabled] {
+        background: $white;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "jam/jam",
+    "require": {
+        "doctrine/orm": "2.*",
+        "erusev/parsedown": "1.*",
+        "bshaffer/oauth2-server-php": "1.*",
+        "swiftmailer/swiftmailer": "dev-master"
+    }
+}

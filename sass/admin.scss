@@ -1,0 +1,31 @@
+// Shared styles
+@import "shared";
+
+// Modules
+@import "admin/modules/login";
+@import "admin/modules/nav";
+@import "admin/modules/users";
+
+section.content {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    padding: 2%;
+    width: 100%;
+    padding-left: calc(300px + 2%);
+    z-index: 1;
+
+    h1 {
+        border-bottom: 1px $grey solid;
+        display: block;
+        width: 100%;
+        padding-bottom: 8px;
+    }
+}
+
+@media #{$mobileAndTablet} {
+    section.content {
+        margin-top: 60px;
+        padding-left: 2%;
+    }
+}

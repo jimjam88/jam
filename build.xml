@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project name="JAM Framework" default="build" basedir="." description="Configures the environment">
+    <property file="build.properties" />
+
+    <target name="build">
+        <!-- Application config -->
+        <echo msg="Creating configuration" />
+        <copy file="config/config.dist.php" tofile="config/config.php" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <!-- Database tokens -->
+                    <token key="db.hostname" value="${db.hostname}" />
+                    <token key="db.username" value="${db.username}" />
+                    <token key="db.password" value="${db.password}" />
+                    <token key="db.dbname" value="${db.dbname}" />
+                    <token key="db.paths.entity" value="${db.paths.entity}" />
+                    <token key="db.paths.repository" value="${db.paths.repository}" />
+                    <token key="db.paths.proxy" value="${db.paths.proxy}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+
+        <!-- Doctrine config -->
+        <echo msg="Creating CLI configuration" />
+        <copy file="config/cli-config.dist.php" tofile="config/cli-config.php" overwrite="true">
+            <filterchain>
+                <replacetokens begintoken="%%" endtoken="%%">
+                    <token key="db.hostname" value="${db.hostname}" />
+                    <token key="db.username" value="${db.username}" />
+                    <token key="db.password" value="${db.password}" />
+                    <token key="db.dbname" value="${db.dbname}" />
+                    <token key="db.paths.entity" value="${db.paths.entity}" />
+                    <token key="db.paths.repository" value="${db.paths.repository}" />
+                    <token key="db.paths.proxy" value="${db.paths.proxy}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+    </target>
+</project>

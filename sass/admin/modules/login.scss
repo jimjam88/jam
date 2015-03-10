@@ -1,0 +1,30 @@
+
+.login-form {
+    width: 400px;
+    background-color: $light-grey;
+    border: 1px $grey solid;
+    margin: 5% auto;
+    padding: 20px;
+    color: $dark-grey;
+    text-align: center;
+    @include border-radius(10px);
+    @include box-shadow(5px 5px 10px $medium-grey);
+    position: relative;
+
+    form {
+        text-align: right;
+        input[type="email"], input[type="password"], input[type="text"] {
+            margin-bottom: 12px;
+        }
+    }
+
+    img.logo {
+        margin-bottom:20px;
+    }
+
+    a.forgotten {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+}

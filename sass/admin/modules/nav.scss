@@ -1,0 +1,103 @@
+nav.sidebar {
+    width: 300px;
+    min-height: 100%;
+    background: $light-grey;
+    border-right: 1px $grey solid;
+    @include box-shadow(0 0 20px $medium-grey);
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 2;
+
+    h3 {
+        border-bottom: 1px $grey solid;
+        margin: 0;
+        padding-left: 20px;
+        display: block;
+        background: $medium-grey;
+        line-height: 59px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            position: relative;
+
+            a {
+                line-height: 55px;
+                background-color: darken($light-grey, 2%);
+                border-bottom: 1px lighten($grey, 20%) solid;
+                display: block;
+                padding-left: 20px;
+                color: $black;
+
+                &:hover {
+                    text-decoration: none;
+                    color: $black;
+                    background-color: darken($light-grey, 5%);
+                }
+            }
+
+            span[class*="icon-"] {
+                position: absolute;
+                right: 20px;
+                top: 0;
+                font-size: 20px;
+                line-height: 55px;
+            }
+        }
+    }
+}
+
+nav.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $black;
+    height: 60px;
+    z-index: 3;
+
+    span.icon-menu {
+        color: $white;
+        line-height: 60px;
+        font-size: 30px;
+        margin-left: 30px;
+    }
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgba($black, 0.8);
+    z-index: 4;
+}
+
+.menu-fade {
+    overflow: hidden;
+
+    .menu-overlay {
+        display: block;
+    }
+}
+
+@media #{$mobileAndTablet} {
+    nav.sidebar {
+        left: -300px;
+        @include box-shadow(none);
+        @include transition-duration(0.5s);
+
+        &.open {
+            left: 0;
+            z-index: 5;
+        }
+    }
+}

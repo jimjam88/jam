@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+config/config.php
+config/cli-config.php
+tmp
+composer.lock
+cache
+vendor
+.sass-cache
+tests/CodeCoverage
+logs
+public
+build.properties
+
