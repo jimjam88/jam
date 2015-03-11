@@ -47,6 +47,7 @@ class View extends PhalconView
         $compiler = $volt->getCompiler();
         $compiler->addFunction('dump', 'var_dump');
         $compiler->addFunction('strtotime', 'strtotime');
+        $compiler->addFunction('json_encode', 'json_encode');
         return $volt;
     }
 }

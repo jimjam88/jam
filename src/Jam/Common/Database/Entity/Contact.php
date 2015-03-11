@@ -94,6 +94,27 @@ class Contact
      */
     protected $postcode;
 
+    /**
+     * To array
+     *
+     * @return mixed[]
+     */
+    public function toArray()
+    {
+        return [
+            'id'           => $this->getId(),
+            'name'         => $this->getName(),
+            'email'        => $this->getEmail(),
+            'phone'        => $this->getPhone(),
+            'mobile'       => $this->getMobile(),
+            'fax'          => $this->getFax(),
+            'addressLine1' => $this->getAddressLine1(),
+            'addressLine2' => $this->getAddressLine2(),
+            'addressLine3' => $this->getAddressLine3(),
+            'city'         => $this->getCity(),
+            'postcode'     => $this->getPostcode(),
+        ];
+    }
 
     /**
      * Gets the value of id.

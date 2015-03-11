@@ -45,6 +45,21 @@ class SocialMedia
     protected $icon;
 
     /**
+     * To array
+     *
+     * @return mixed[]
+     */
+    public function toArray()
+    {
+        return [
+            'id'   => $this->getId(),
+            'name' => $this->getName(),
+            'url'  => $this->getUrl(),
+            'icon' => $this->getIcon(),
+        ];
+    }
+
+    /**
      * Gets the value of id.
      *
      * @return integer

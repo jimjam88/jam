@@ -5,3 +5,4 @@ $router->add('/api', [
     'controller' => 'index',
     'action'     => 'index',
 ]);
+
