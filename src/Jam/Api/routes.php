@@ -1,8 +1,7 @@
 <?php
 
-$router->add('/api', [
+$router->add('/api/details', [
     'module'     => 'api',
     'controller' => 'index',
-    'action'     => 'index',
+    'action'     => 'details',
 ]);
-

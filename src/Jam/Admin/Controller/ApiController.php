@@ -9,6 +9,12 @@ class ApiController extends AuthControllerAbstract
 {
     public function indexAction()
     {
-        $this->view->details = $this->redispatch(ApiIndexController::class, 'index');
+    }
+
+    public function detailsAction()
+    {
+        $this->view->details = json_encode($this->redispatch(
+            ApiIndexController::class, 'details'
+        ), JSON_PRETTY_PRINT);
     }
 }

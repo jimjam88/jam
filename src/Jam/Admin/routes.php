@@ -117,3 +117,9 @@ $router->addGet('/admin/api', [
     'controller' => 'api',
     'action'     => 'index',
 ])->allow(UserRole::ADMIN);
+
+$router->addGet('/admin/api/details', [
+    'module'     => 'admin',
+    'controller' => 'api',
+    'action'     => 'details',
+])->allow(UserRole::ADMIN);

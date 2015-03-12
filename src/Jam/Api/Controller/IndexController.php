@@ -7,7 +7,7 @@ use Jam\Api\Model\Details;
 
 class IndexController extends ControllerAbstract
 {
-    public function indexAction()
+    public function detailsAction()
     {
         $this->response->setJsonContent(
             Details::get($this->getDI()->get('entity-manager')),
