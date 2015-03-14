@@ -79,6 +79,10 @@ class ContactRepository extends EntityRepository
             $contact->setCity($data['city']);
         }
 
+        if (array_key_exists('county', $data) && $data['county'] != $contact->getCounty()) {
+            $contact->setCounty($data['county']);
+        }
+
         if (array_key_exists('postcode', $data) && $data['postcode'] != $contact->getPostcode()) {
             $contact->setPostcode($data['postcode']);
         }

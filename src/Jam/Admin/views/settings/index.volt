@@ -77,6 +77,13 @@
                 </div>
             </div>
             <div class="form-group">
+                <label for="county" class="col-sm-2 control-label">County</label>
+                <div class="col-sm-10 input-group">
+                    <span class="input-group-addon icon-yorkshire"></span>
+                    <input type="text" name="county" id="county" class="form-control" placeholder="Enter the county..." value="{{ contact.getCounty() }}">
+                </div>
+            </div>
+            <div class="form-group">
                 <label for="postcode" class="col-sm-2 control-label">Postcode</label>
                 <div class="col-sm-10 input-group">
                     <span class="input-group-addon icon-location"></span>

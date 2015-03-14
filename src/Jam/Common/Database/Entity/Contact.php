@@ -90,6 +90,13 @@ class Contact
     /**
      * @var string
      *
+     * @ORM\Column(name="county", type="string", length=100, nullable=true)
+     */
+    protected $county;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="postcode", type="string", length=20, nullable=true)
      */
     protected $postcode;
@@ -365,6 +372,30 @@ class Contact
     public function setPostcode($postcode)
     {
         $this->postcode = $postcode;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of county.
+     *
+     * @return string
+     */
+    public function getCounty()
+    {
+        return $this->county;
+    }
+
+    /**
+     * Sets the value of county.
+     *
+     * @param string $county the county
+     *
+     * @return self
+     */
+    public function setCounty($county)
+    {
+        $this->county = $county;
 
         return $this;
     }

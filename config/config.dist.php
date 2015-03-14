@@ -30,7 +30,7 @@ return new Config([
         'web' => [
             'className' => WebModule::class,
             'path'      => realpath(__DIR__ . '/../src/Jam/Web/Module.php'),
-            'db'        => false,
+            'db'        => true,
         ],
         'admin' => [
             'className' => AdminModule::class,

@@ -2,7 +2,7 @@
 
 namespace Jam\Web\Controller;
 
-class IndexController extends WebControllerAbstract
+class ContactController extends WebControllerAbstract
 {
     public function indexAction()
     {
